@@ -31,3 +31,5 @@ CREATE TABLE reservation_item (g_email text, g_id UUID, h_id text, r_id int, rt_
 CREATE TABLE facility_usage (g_id UUID, h_id text, fc_name text, used_date date, info text, amount double, amt_paid double, status text, data text, PRIMARY KEY(g_id, h_id, fc_name));
 
 CREATE TABLE payment_bill (g_id UUID, i_id text, pm_date date, info text, amount double, data text, PRIMARY KEY((g_id, i_id), pm_date));
+
+CREATE TABLE History (g_id UUID, h_id text, rs_date bigint, cf_no text, no_rooms int, amount double, data text, PRIMARY KEY((g_id, h_id, rs_date), cf_no);
